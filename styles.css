@@ -1,0 +1,156 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+
+body{
+
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.topper{
+  height: 150px;
+
+}
+.footer { 
+  position: absolute; 
+  left: 0 ; right: 0; bottom: 0; 
+  min-height:7vh;
+  background-color: rgb(223, 219, 219);
+  display:flex;
+  flex-direction: row;
+  outline: rgb(152, 151, 151) 1px solid;
+  justify-content: center;
+
+}
+.footitem{
+  align-self: center;
+  padding-left: 20px;
+  color:darkslategrey;
+  text-decoration: none;
+  font-family: arial;
+
+  justify-content: space-between;
+}
+.footitem:hover{
+  text-decoration: underline;
+}
+.item{
+  align-self: center;
+  padding-right: 10px;
+  color:darkslategrey;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 10pt;
+  
+}
+.item:hover{
+  text-decoration: underline;
+}
+.icons{
+  max-height: 20px;
+  width: auto;
+  align-self: center;
+  padding-top: 5px;
+}
+.icons2{
+  max-height: 40px;
+  width: auto;
+  align-self: center;
+  padding-top: 5px;
+}
+.navi{
+  display:flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 50px;
+}
+#logo{
+  
+  text-align: center; 
+  display: grid; 
+  position: relative;}
+
+#button{
+
+  text-align: center;
+  flex: 1 0 auto;
+  height:50vh;
+
+  
+}
+.imgbox{
+
+    margin: 0 auto;
+}
+
+img{
+    width: 290px;
+    height: auto;
+}
+
+.searchcontainer{
+
+  box-sizing: border-box;
+  margin-top: 0 auto;
+  height: 80px;
+}
+
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+  background: transparent;
+  display: inline-block;
+  margin: 0 auto;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+@media only screen and (max-width: 750px) {
+  .search  {
+    width: 500px;
+  }
+  .footer{
+    font-size: 10pt;
+  }
+
+}
+
+.search input {
+  height: 44px;
+  width: 6000px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  font: 16px arial,sans-serif;
+  padding-left: 10px;
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search { 
+  position: relative;
+  bottom: 15px;
+  left: 35px;
+}
+
+.btn {
+  background-color: rgb(235, 233, 233);
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.btn:hover, .btn:focus {
+  outline: rgba(0, 0, 0, 0.02) 1px solid;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background-color: rgb(243, 242, 242);
+}
