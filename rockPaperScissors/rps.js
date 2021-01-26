@@ -1,4 +1,5 @@
 let moves = ['rock', 'paper', 'scissors'];
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);

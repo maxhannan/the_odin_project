@@ -13,34 +13,34 @@ function checkValid(playerMove){
 
 function playRound(computerSelection, playerSelection){
     if(playerSelection === computerSelection){
-        return 'A Draw!';
+        return ['A Draw!'];
     };
     if(playerSelection === 'rock'){
         if(computerSelection === 'paper'){
-            return 'You Lose!  paper beats rock!';
+            return ['You Lose!',  'paper beats rock'];
         }else{
-            return 'You Win!  rock beats scissors!' ;
+            return ['You Win!',  'rock beats scissors'] ;
         };
     };
     if(playerSelection === 'paper'){
         if(computerSelection === 'scissors'){
-            return 'You Lose!  scissors beats paper!';
+            return ['You Lose!', 'scissors beats paper'];
         }else{
-            return 'You Win!  paper beats rock!';
+            return ['You Win!',  'paper beats rock'];
         };
     };
     if(playerSelection === 'scissors'){
         if(computerSelection === 'rock'){
-            return 'You Lose!  rock beats scissors!';
+            return ['You Lose!',  'rock beats scissors'];
         }else{
-            return 'You Win!  scissors beats paper!';
+            return ['You Win!',  'scissors beats paper'];
         };
     };
 };
 let el_down = document.getElementById("GFG_DOWN");
 let el_ps = document.getElementById("playerScore");
 let el_cs = document.getElementById("compScore");
-let el_dr = document.getElementById("draws");
+let el_oc = document.getElementById("outcome");
 let playerScore = 0;
 let compScore = 0;
 let drawAmt = 0;
@@ -48,14 +48,19 @@ function GFG_click(clicked) {
     let x = clicked; 
     let compMove = computerPlay(moves);
     let op = playRound(compMove, x);
-    if(op.includes('Win')){
+    if(op[0].includes('Win')){
         playerScore += 1;
-    }else if(op.includes('Lose')){
+    }else if(op[0].includes('Lose')){
         compScore += 1;
     }else{
         drawAmt += 1;
     }
-    el_down.innerHTML = op; 
+    el_down.innerHTML = op[0]; 
+    if(op[1] != undefined){
+        el_oc.innerHTML = op[1]; 
+    }else{
+        el_oc.innerHTML = '';
+    }
     
     el_cs.innerHTML = ' ' + compScore;
     el_ps.innerText = ' ' +playerScore;

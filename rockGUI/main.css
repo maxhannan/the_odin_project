@@ -1,0 +1,30 @@
+#imgbtns,#imgbtnr,#imgbtnp{
+    background-image: url('scissors2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-self: center;
+    height:20vw; 
+    width: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+#imgbtnr{
+    background-image: url('rock2.png');
+}
+#imgbtnp{
+    background-image: url('paper3.png');
+}
+
+#imgbtnp:hover{
+    background-image: url('paperHover3.png');
+    opacity:0.7;
+}
+#imgbtnr:hover{
+    background-image: url('rockhover.png');
+    opacity:0.7;
+}
+
+#imgbtns:hover{
+    background-image: url('scissorHover.png');
+    opacity:0.7;
+}
