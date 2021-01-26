@@ -8,27 +8,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
     </head>
-    <body  style = 'display: flex; flex-direction: column;'>
-       <div style = 'display: flex; justify-content:center; height: 65vh;' class = 'buttonContainer'>
+    <body  style = 'display: flex; flex-direction: column; background-color: wheat;'>
+       <div style = 'display: flex; align-items: center; justify-content:space-around; height: 65vh;' class = 'buttonContainer'>
        
           
-        <button  style = 'align-self: center;height:10%; width: 10%;' id="rock" onClick="GFG_click(this.id)"> 
-            Rock 
-        </button> 
-          
-        <button style = 'align-self: center;height:10%; width: 10%;' id="paper" onClick="GFG_click(this.id)"> 
-            Paper 
-        </button> 
-          
-        <button style = 'align-self: center;height:10%; width: 10%;' id="scissors" onClick="GFG_click(this.id)"> 
-            Scissors 
-        </button> 
+        
+        <input style = 'align-self: center;height:20vw; width: auto;' id = 'imgbtn' type="image" src="rock.png"
+         value="rock" onClick="GFG_click(this.value)"/>
+         <input style = ' align-self: center;height:20vw; width: auto;' id = 'imgbtn' type="image" src="paper.png"
+         value ="paper" onClick="GFG_click(this.value)"/>
+         <input style = 'align-self: center;height:20vw; width: auto;' id = 'imgbtn' type="image" src="scissors.png"
+         value="scissors" onClick="GFG_click(this.value)"/>
+       
   
        </div>
-       <div class="resultContainer" style="display:grid; justify-content:center; height: 30vh;">
+       <div class="resultContainer" style="display:flex; flex-direction: row; height: 30vh; justify-content: space-around;">
+        <div id = 'result' style = 'display: flex; width: 65vw;'>
         <p id = "GFG_DOWN" style =  
         "color:black; align-self: center; font-size: 50px; font-weight: bold;"> 
         </p> 
+        </div>
+        <div style = 'display:flex; flex-direction: column; align-self: center;'>
+            <h1 >Player Score:<span id = 'playerScore' > 0</span> </h1>
+            <h1>Comp Score:<span id = 'compScore'> 0</span> </h1>
+            
+        </div>
+    </div>
 
     </div>
 

@@ -17,32 +17,46 @@ function playRound(computerSelection, playerSelection){
     };
     if(playerSelection === 'rock'){
         if(computerSelection === 'paper'){
-            return 'Computer wins, paper beats rock!';
+            return 'You Lose!  paper beats rock!';
         }else{
-            return 'Player wins, rock beats scissors!' ;
+            return 'You Win!  rock beats scissors!' ;
         };
     };
     if(playerSelection === 'paper'){
         if(computerSelection === 'scissors'){
-            return 'Computer wins, scissors beats paper!';
+            return 'You Lose!  scissors beats paper!';
         }else{
-            return 'Player wins, paper beats rock!';
+            return 'You Win!  paper beats rock!';
         };
     };
     if(playerSelection === 'scissors'){
         if(computerSelection === 'rock'){
-            return 'Computer wins, rock beats scissors!';
+            return 'You Lose!  rock beats scissors!';
         }else{
-            return 'Player wins, scissors beats paper!';
+            return 'You Win!  scissors beats paper!';
         };
     };
 };
-var el_down = document.getElementById("GFG_DOWN");
+let el_down = document.getElementById("GFG_DOWN");
+let el_ps = document.getElementById("playerScore");
+let el_cs = document.getElementById("compScore");
+let el_dr = document.getElementById("draws");
+let playerScore = 0;
+let compScore = 0;
+let drawAmt = 0;
 function GFG_click(clicked) { 
     let x = clicked; 
     let compMove = computerPlay(moves);
     let op = playRound(compMove, x);
-   
+    if(op.includes('Win')){
+        playerScore += 1;
+    }else if(op.includes('Lose')){
+        compScore += 1;
+    }else{
+        drawAmt += 1;
+    }
     el_down.innerHTML = op; 
     
+    el_cs.innerHTML = ' ' + compScore;
+    el_ps.innerText = ' ' +playerScore;
 }        
