@@ -1,3 +1,9 @@
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); 
+}
+
 function grid(width){
     
     var main = document.getElementById('main');
@@ -17,8 +23,12 @@ window.open = grid(gridSize);
 var color = [, "#3C9EE7", "#E7993C",  
 "#E73C99", "#3CE746", "#E7993C"]; 
 
-var main = document.getElementById('main');
+const main = document.getElementById('main');
 let boxes = document.getElementsByClassName('box');
+function randColor(){
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+
+} 
 
 function newBoard(width){
     main.innerHTML = ''
@@ -38,7 +48,7 @@ async function shake(){
     main.classList.remove('shake'); 
 }
 document.getElementsByClassName('gridSize')[0].onclick = function() {
-    gridSize = prompt('Grid Size:');
+    gridSize = prompt('Grid Size (2-100)');
     newBoard(gridSize)
     shake();
   }
@@ -49,13 +59,22 @@ document.getElementsByClassName('reset')[0].onclick = function() {
     
     
 }
-  
-
-
-
-
+document.getElementsByClassName('color')[0].onclick = function() {
+    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
+        v.style.background = randColor();
+      }));
+    
+    
+}
+document.getElementsByClassName('blk')[0].onclick = function() {
+    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
+        v.style.background = 'black';
+      }));
+    
+    
+}
 
 Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-  v.style.background = color[Math.floor(Math.random() * color.length)];
+  v.style.background = 'black';
 }));
 
