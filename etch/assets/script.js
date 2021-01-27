@@ -35,7 +35,7 @@ function newBoard(width){
     grid(width);
     let boxes = document.getElementsByClassName('box');
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-        v.style.background = color[Math.floor(Math.random() * color.length)];
+        v.style.background = randColor();
       }));
 };
 function sleep(ms) {
