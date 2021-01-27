@@ -12,7 +12,7 @@ function grid(width){
         
     }
 }
-let gridSize = prompt('Grid Size:');
+let gridSize = 16;
 window.open = grid(gridSize);
 var color = [, "#3C9EE7", "#E7993C",  
 "#E73C99", "#3CE746", "#E7993C"]; 
