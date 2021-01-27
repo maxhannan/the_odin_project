@@ -6,39 +6,32 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="assets/main.css">
     </head>
-    <body  style = 'display: flex; flex-direction: column; 	justify-content:center; background-color: #fffaf0;'>
-       <div style = 'display: flex; align-items: center; justify-content:center; height: 55vh;' class = 'buttonContainer'>
-       
-          
-        
-        <input  id = 'imgbtnr' type="image" tabindex="1" src="border.png" value="rock" onClick="GFG_click(this.value)"/>
-         <input id = 'imgbtnp' type="image" src="border.png" value ="paper" onClick="GFG_click(this.value)"/>
-         <input id = 'imgbtns' type="image" src="border.png" value="scissors" onClick="GFG_click(this.value)"/>
+    <body>
+       <div class = 'buttonContainer'>
+            <input  id = 'imgbtnr' type="image" tabindex="1" src="assets/frame.png" value="rock" onClick="GFG_click(this.value)"/>
+            <input id = 'imgbtnp' type="image" src="assets/frame.png" value ="paper" onClick="GFG_click(this.value)"/>
+            <input id = 'imgbtns' type="image" src="assets/frame.png" value="scissors" onClick="GFG_click(this.value)"/>
        </div>
-       <div class="resultContainer" style="border: black 3px solid; border-radius: 10px; display:flex; flex-direction: row; width: 64%; height: 20vh; align-self: center; justify-content: space-between;">
-        <div id = 'result' style = 'display: flex; width: 20vw; text-align:left;'>
-        <p id = "GFG_DOWN" style =  
-        "color:black; align-self: center; font-size: 40px; font-weight: bold;margin-left: 8%;"> 
-        </p> 
+       <div class="resultContainer" >
+            <div id = 'result'>
+                <p id = "GFG_DOWN"> </p> 
+            </div>
+            <div id = "outcomeContainer">
+                <p id = 'outcome'></p>
+            </div>
+            <div id = 'scoreContainer'>
+                <h1 class = 'score'>Player Score:<span id = 'playerScore' > 0</span> </h1>
+                <h1 class = 'score'>Comp Score:<span id = 'compScore'> 0</span></h1> 
+            </div>
         </div>
-        <div style = 'display: flex; width:45%;  align-self: center; '>
-            <p id = 'outcome' style =  
-            "color:black; font-size: 35px; font-weight: bold;margin-left: 15%; align-self: center; "></p>
+        <div id = 'buttonHolder'>
+            <button class = 'btn' onClick="gameOver()">reset</button>
         </div>
-        <div style = ' display:flex; flex-direction: column; width: 25%; align-self: center; text-align: right; margin-right: 3%;'>
-            <h1 style = 'font-size: 20px'>Player Score:<span id = 'playerScore' > 0</span> </h1>
-            <h1 style = 'font-size: 20px'>Comp Score:<span id = 'compScore'> 0</span> </h1>
-            
-        </div>
-    </div>
-    <div style = 'align-self: center; padding-top: 2%;'>
-        <button class = 'btn' onClick="gameOver()">reset</button>
-    </div>
     </div>
 
  
-        <script src="script.js" async defer></script>
+        <script src="assets/script.js" async defer></script>
     </body>
 </html>

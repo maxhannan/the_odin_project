@@ -1,0 +1,155 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex; 
+    flex-direction: column; 	
+    justify-content:center; 
+    background-color: #fffaf0;
+}
+
+.buttonContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content:center; 
+    height: 55vh;
+}
+
+.resultContainer{
+    border: black 3px solid; 
+    border-radius: 10px; 
+    display:flex; 
+    flex-direction: row; 
+    width: 66%; 
+    height: 20vh; 
+    align-self: center; 
+    justify-content: space-between;
+}
+
+#result{
+    display: flex; width: 20vw; 
+    text-align:center;
+}
+#outcomes{
+    height: 30%; 
+    display: flex; 
+    flex-direction:row;
+}
+#icons{
+    width:30%; 
+    align-self:baseline;
+    padding-top:5%;
+}
+#GFG_DOWN{
+    color:black; 
+    align-self: center; 
+    font-size: 40px; 
+    font-weight: 
+    bold;
+    margin-left: 8%;
+}
+
+#outcomeContainer{
+    display: flex; 
+    width:45%;  
+    align-self: center; 
+}
+
+#outcome{
+    color:black; 
+    font-size: 35px; 
+    font-weight: bold;
+    padding-left: 15%; 
+    align-self: center; 
+}
+
+#scoreContainer{
+    display:flex; 
+    flex-direction: column; 
+    width: 25%; 
+    align-self: center; 
+    text-align: right; 
+    margin-right: 3%;
+}
+
+.score{
+    font-size: 20px
+}
+
+#buttonHolder{
+    align-self: center; 
+    padding-top: 2%;
+}
+
+.btn{
+    outline:0;
+    font-family: 'Courier New', Courier, monospace;
+    align-self: center; 
+    font-size:1em;
+    font-weight:600;
+    background:Black;
+    color:white;
+    border:none;
+    padding:1.5em 3em;
+    transition:all .3s ease-out; 
+    box-shadow:inset 0 -8px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 gray,
+      2px 2px 0 0 gray,
+      3px 3px 0 0 gray,
+      4px 4px 0 0 gray,
+      5px 5px 0 0 gray,
+      6px 6px 0 0 gray;
+      
+}
+
+.btn:hover{
+    background-color:limegreen;
+}
+
+.btn:active{
+    color:#222;
+    box-shadow:inset 0 -4px 0 0 rgba(0,0,0,.2),
+    1px 1px 0 0 #d98e20;  
+}
+
+#imgbtns,#imgbtnr,#imgbtnp{
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-self: center;
+    height:20vw; 
+    width: auto;
+    margin-right: 1%;
+    margin-left: 1%;
+    
+    border-radius: 50%;
+}
+#imgbtns{background-image: url('scissors.png');}
+
+#imgbtnr{
+    background-image: url('rock.png');
+}
+
+#imgbtnp{
+    background-image: url('paper.png');
+}
+
+#imgbtnp:hover{
+    background-color: lightpink;
+    opacity: 0.8;
+    background-image: url('paperWhite.png');
+}
+
+#imgbtnr:hover{
+    background-color: lightgreen;
+    background-image: url('rockWhite.png');
+    opacity: 0.8;
+}
+
+#imgbtns:hover{
+    background-image: url('scissorsWhite.png');
+    background-color: lightskyblue;
+    opacity: 0.8;
+}
+
+#imgbtnr:active,#imgbtns:active,#imgbtnp:active {
+    transform: translateY(4px);
+  }
