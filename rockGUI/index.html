@@ -9,14 +9,9 @@
         <link rel="stylesheet" href="assets/main.css">
     </head>
     <body>
-       <div class = 'buttonContainer'>
-            <input  id = 'imgbtnr' type="image" tabindex="1" src="assets/frame.png" value="rock" onClick="GFG_click(this.value)"/>
-            <input id = 'imgbtnp' type="image" src="assets/frame.png" value ="paper" onClick="GFG_click(this.value)"/>
-            <input id = 'imgbtns' type="image" src="assets/frame.png" value="scissors" onClick="GFG_click(this.value)"/>
-       </div>
-       <div class="resultContainer" >
+        <div class="resultContainer" >
             <div id = 'result'>
-                <p id = "GFG_DOWN"> </p> 
+                <p id = "GFG_DOWN">ROCK PAPER SCISSORS </p> 
             </div>
             <div id = "outcomeContainer">
                 <p id = 'outcome'></p>
@@ -26,9 +21,15 @@
                 <h1 class = 'score'>Comp Score:<span id = 'compScore'> 0</span></h1> 
             </div>
         </div>
-        <div id = 'buttonHolder'>
-            <button class = 'btn' onClick="gameOver()">reset</button>
-        </div>
+        
+    </div>
+        <div class = 'buttonContainer'>
+            <input  id = 'imgbtnr' type="image" tabindex="1" src="assets/frame.png" value="rock" onClick="GFG_click(this.value)"/>
+            <input id = 'imgbtnp' type="image" src="assets/frame.png" value ="paper" onClick="GFG_click(this.value)"/>
+            <input id = 'imgbtns' type="image" src="assets/frame.png" value="scissors" onClick="GFG_click(this.value)"/>
+       </div>
+       <div id = 'buttonHolder'>
+        <button class = 'btn' onClick="gameOver()">reset</button>
     </div>
 
  
