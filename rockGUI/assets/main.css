@@ -41,7 +41,7 @@ body{
 #GFG_DOWN{
     color:black; 
     align-self: center; 
-    font-size: 40px; 
+    font-size: 3vw; 
     font-weight: 
     bold;
     margin-left: 8%;
@@ -55,7 +55,7 @@ body{
 
 #outcome{
     color:black; 
-    font-size: 35px; 
+    font-size: 2.5vw; 
     font-weight: bold;
     padding-left: 15%; 
     align-self: center; 
@@ -71,7 +71,7 @@ body{
 }
 
 .score{
-    font-size: 20px
+    font-size: 1.7vw;
 }
 
 #buttonHolder{
@@ -81,6 +81,7 @@ body{
 
 .btn{
     outline:0;
+    opacity: .2;
     font-family: 'Courier New', Courier, monospace;
     align-self: center; 
     font-size:1em;
@@ -102,6 +103,7 @@ body{
 
 .btn:hover{
     background-color:limegreen;
+    opacity: .7;
 }
 
 .btn:active{
@@ -134,20 +136,20 @@ body{
 
 #imgbtnp:hover{
     background-color: lightpink;
-    opacity: 0.8;
+    opacity: 0.7;
     background-image: url('paperWhite.png');
 }
 
 #imgbtnr:hover{
     background-color: lightgreen;
     background-image: url('rockWhite.png');
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 #imgbtns:hover{
     background-image: url('scissorsWhite.png');
     background-color: lightskyblue;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 #imgbtnr:active,#imgbtns:active,#imgbtnp:active {
