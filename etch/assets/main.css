@@ -1,0 +1,29 @@
+body{
+    display:flex;
+    flex-direction:column ;
+}
+h1{
+    text-align: center;
+}
+#main{
+    height:40vw;
+    width:40vw;
+    border: gray 1px solid;
+    align-self: center;
+    display: grid;
+   
+    flex-wrap: wrap;
+}
+.box{
+    
+    border: gray 1px solid;
+}
+
+.btnContainer{
+    margin-top: 2%;
+    align-self: center;
+}
+button{
+    height: 50px;
+    width: 80px;
+}
