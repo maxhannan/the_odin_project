@@ -8,35 +8,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
     </head>
-    <body  style = 'display: flex; flex-direction: column; 	background-color: #fffaf0;'>
-       <div style = 'display: flex; align-items: center; justify-content:center; height: 65vh;' class = 'buttonContainer'>
+    <body  style = 'display: flex; flex-direction: column; 	justify-content:center; background-color: #fffaf0;'>
+       <div style = 'display: flex; align-items: center; justify-content:center; height: 55vh;' class = 'buttonContainer'>
        
           
         
-        <input  id = 'imgbtnr' type="image" src="border.png" value="rock" onClick="GFG_click(this.value)"/>
+        <input  id = 'imgbtnr' type="image" tabindex="1" src="border.png" value="rock" onClick="GFG_click(this.value)"/>
          <input id = 'imgbtnp' type="image" src="border.png" value ="paper" onClick="GFG_click(this.value)"/>
          <input id = 'imgbtns' type="image" src="border.png" value="scissors" onClick="GFG_click(this.value)"/>
-       
-  
        </div>
-      
-       <div class="resultContainer" style=" border: dotted; border-radius: 10px; display:flex; flex-direction: row; width: 80%; height: 20vh; align-self: center; justify-content: space-between;">
+       <div class="resultContainer" style="border: black 3px solid; border-radius: 10px; display:flex; flex-direction: row; width: 64%; height: 20vh; align-self: center; justify-content: space-between;">
         <div id = 'result' style = 'display: flex; width: 20vw; text-align:left;'>
         <p id = "GFG_DOWN" style =  
         "color:black; align-self: center; font-size: 40px; font-weight: bold;margin-left: 8%;"> 
         </p> 
         </div>
-        <div style = 'display: flex; width:35%;  align-self: center; '>
+        <div style = 'display: flex; width:45%;  align-self: center; '>
             <p id = 'outcome' style =  
-            "color:black; font-size: 40px; font-weight: bold;margin-left: 10%; "></p>
+            "color:black; font-size: 35px; font-weight: bold;margin-left: 15%; align-self: center; "></p>
         </div>
-        <div style = ' display:flex; flex-direction: column; width: 20%; align-self: center; text-align: right; margin-right: 3%;'>
-            <h1 >Player Score:<span id = 'playerScore' > 0</span> </h1>
-            <h1>Comp Score:<span id = 'compScore'> 0</span> </h1>
+        <div style = ' display:flex; flex-direction: column; width: 25%; align-self: center; text-align: right; margin-right: 3%;'>
+            <h1 style = 'font-size: 20px'>Player Score:<span id = 'playerScore' > 0</span> </h1>
+            <h1 style = 'font-size: 20px'>Comp Score:<span id = 'compScore'> 0</span> </h1>
             
         </div>
     </div>
-
+    <div style = 'align-self: center; padding-top: 2%;'>
+        <button class = 'btn' onClick="gameOver()">reset</button>
+    </div>
     </div>
 
  

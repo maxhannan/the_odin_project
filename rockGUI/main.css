@@ -1,3 +1,35 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+  .btn{
+    outline:0;
+    align-self: center; 
+    font-size:.5em;
+    font-weight:600;
+    background:Black;
+    color:white;
+    border:none;
+    padding:2em 4em;
+    transition:all .3s ease-out; 
+    box-shadow:inset 0 -8px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 gray,
+      2px 2px 0 0 gray,
+      3px 3px 0 0 gray,
+      4px 4px 0 0 gray,
+      5px 5px 0 0 gray,
+      6px 6px 0 0 gray;
+      
+  }
+  .btn:hover{
+    color:cornsilk;
+  }
+  .btn:active{
+    color:#222;
+    box-shadow:inset 0 -4px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #d98e20;
+     
+      
+  }
 #imgbtns,#imgbtnr,#imgbtnp{
     background-image: url('scissors2.png');
     background-size: 100%;
@@ -5,8 +37,8 @@
     align-self: center;
     height:20vw; 
     width: auto;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
 #imgbtnr{
     background-image: url('rock2.png');
@@ -25,6 +57,10 @@
 }
 
 #imgbtns:hover{
-    background-image: url('scissorHover.png');
+    background-image: url('scissorsCut.png');
     opacity:0.7;
 }
+#imgbtnr:active,#imgbtns:active,#imgbtnp:active {
+    
+    transform: translateY(4px);
+  }
