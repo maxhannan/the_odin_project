@@ -13,7 +13,7 @@ colorPicker.addEventListener("input", watchColorPicker, false);
 function watchColorPicker(event) {
     hex = event.target.value;
     console.log(hex);
-    document.querySelector('#cp').style.opacity = 1; 
+    
     colorPick();
 
 }
@@ -37,7 +37,8 @@ function grid(width){
         main.appendChild(box);
         }
         
-    }
+    } 
+    
 }
 
 function randColor(){
@@ -51,6 +52,7 @@ function newBoard(width){
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = 'black';
       }));
+
 };
 
 function sleep(ms) {
@@ -135,7 +137,7 @@ function randomPick() {
     document.querySelector('#randcolor').style.backgroundColor = 'green'; 
     document.querySelector('#black').style.backgroundColor = 'black';
     document.querySelector('#eraser').style.backgroundColor = 'black';
-    document.querySelector('#cp').style.opacity = .2;     
+    document.querySelector('#cp').style.opacity = .4;     
 }
 
 function blackPick() {
@@ -147,7 +149,7 @@ function blackPick() {
       document.querySelector('#randcolor').style.backgroundColor = 'black'; 
       document.querySelector('#eraser').style.backgroundColor = 'black'; 
       document.querySelector('#black').style.backgroundColor = 'green';
-      document.querySelector('#cp').style.opacity = .2;       
+      document.querySelector('#cp').style.opacity = .4;       
 }
 function eraser() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
@@ -156,7 +158,7 @@ function eraser() {
         
       })); 
       document.querySelector('#randcolor').style.backgroundColor = 'black'; 
-      document.querySelector('#cp').style.opacity = .2; 
+      document.querySelector('#cp').style.opacity = .4; 
       document.querySelector('#black').style.backgroundColor = 'black';   
       document.querySelector('#eraser').style.backgroundColor = 'green';    
 }
