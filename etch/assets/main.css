@@ -21,9 +21,7 @@ h1{
     flex-wrap: wrap;
 }
 .box{
-  border: gray 1px solid;
-  
-    
+  border: gray 1px solid;   
 }
 #main.shake {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -63,7 +61,7 @@ button{
     align-self: center; 
     font-size:.8em;
     font-weight:600;
-    background:Black;
+    background:black;
     color:white;
     border:none;
     padding:1.5em 3em;
@@ -82,10 +80,9 @@ button{
 }
 
 button:hover{
-   
     opacity: .5;
-    color: black;
-    background-color: #A9C9FF;
+    color: white;
+    background-color: gray;
 
 }
 button:active{

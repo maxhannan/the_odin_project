@@ -4,9 +4,15 @@ const main = document.getElementById('main');
 let boxes = document.getElementsByClassName('box');
 let boxList = Array.from(boxes);
 let gridOn = true;
-let colorPicker = document.getElementById('cp');
+const colorPicker = document.getElementById('cp');
+const randBtn = document.querySelector('#randcolor');
+const blkBtn = document.querySelector('#black');
+const eraserBtn = document.querySelector('#eraser');
+const gridTogBtn = document.querySelector('#gridTog');
 let hex = 'red';
 blackPick()
+
+
 // Random Whole Number Generator 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -32,7 +38,6 @@ function grid(width){
         box.className = "box";
         main.appendChild(box);
         }
-        
     } 
     
 }
@@ -75,18 +80,18 @@ function gridTog() {
     if(gridOn === true){
         for(let i = 0; i < boxList.length; i++){
             boxList[i].style.border = 'gray 0px solid';
-            document.querySelector('#gridTog').innerHTML = 'Grid On';
+            gridTogBtn.innerHTML = 'Grid On';
             gridOn = false;
         }
     }else{
         for(let i = 0; i < boxList.length; i++){
             boxList[i].style.border = 'gray 1px solid';
-            document.querySelector('#gridTog').innerHTML = 'Grid Off';
+            gridTogBtn.innerHTML = 'Grid Off';
             gridOn = true; 
         } 
     }
-
 }
+
 // reverse function for reset 
 function gridReverse(){
     if(gridOn === true){
@@ -104,43 +109,44 @@ function reset() {
     gridTog() 
     blackPick() 
 }
+
 // Functions for etch a sketch tools. 
 function colorPick() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = hex;
       }));
-    document.querySelector('#randcolor').style.backgroundColor = 'black'; 
-    document.querySelector('#black').style.backgroundColor = 'black';
-    document.querySelector('#eraser').style.backgroundColor = 'black';
-    document.querySelector('#cp').style.opacity = 1;     
+    randBtn.style.backgroundColor = 'black'; 
+    blkBtn.style.backgroundColor = 'black';
+    eraserBtn.style.backgroundColor = 'black';
+    colorPicker.style.opacity = 1;     
 }
 function randomPick() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = randColor();
       }));
-    document.querySelector('#randcolor').style.backgroundColor = 'green'; 
-    document.querySelector('#black').style.backgroundColor = 'black';
-    document.querySelector('#eraser').style.backgroundColor = 'black';
-    document.querySelector('#cp').style.opacity = .4;     
+    randBtn.style.backgroundColor = 'green'; 
+    blkBtn.style.backgroundColor = 'black';
+    eraserBtn.style.backgroundColor = 'black';
+    colorPicker.style.opacity = .4;     
 }
 
 function blackPick() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = 'black';  
       })); 
-      document.querySelector('#randcolor').style.backgroundColor = 'black'; 
-      document.querySelector('#eraser').style.backgroundColor = 'black'; 
-      document.querySelector('#black').style.backgroundColor = 'green';
-      document.querySelector('#cp').style.opacity = .4;       
+      randBtn.style.backgroundColor = 'black'; 
+      eraserBtn.style.backgroundColor = 'black'; 
+      blkBtn.style.backgroundColor = 'green';
+      colorPicker.style.opacity = .4;       
 }
 function eraser() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = 'transparent';
       })); 
-      document.querySelector('#randcolor').style.backgroundColor = 'black'; 
-      document.querySelector('#cp').style.opacity = .4; 
-      document.querySelector('#black').style.backgroundColor = 'black';   
-      document.querySelector('#eraser').style.backgroundColor = 'green';    
+      randBtn.style.backgroundColor = 'black'; 
+      colorPicker.style.opacity = .4; 
+      blkBtn.style.backgroundColor = 'black';   
+      eraserBtn.style.backgroundColor = 'green';    
 }
 
 
