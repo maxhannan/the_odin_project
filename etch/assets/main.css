@@ -11,16 +11,17 @@ h1{
     
 }
 #main{
-    height:40vw;
-    width:40vw;
+    height:35vw;
+    width:35vw;
     border: gray 1px solid;
     align-self: center;
     display: grid;
-   
+    
     flex-wrap: wrap;
 }
 .box{
-    border: gray 1px solid;
+  border: gray 1px solid;
+  
     
 }
 #main.shake {
@@ -56,7 +57,7 @@ h1{
 }
 button{
     outline:0;
-    opacity: .2;
+    opacity: .5;
     font-family: 'Courier New', Courier, monospace;
     align-self: center; 
     font-size:.8em;

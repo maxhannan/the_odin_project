@@ -11,10 +11,11 @@
     <body>
         <h1>Etch-a-Sketch</h1>
         <div class = 'btnContainer'>
-            <button class = 'color'>Color</button>
-            <button class = 'blk'>Black</button>
-            <button class = 'gridSize'>Grid Size</button>
-            <button class = 'reset'>Reset</button>
+            <button id = 'color' onclick="colorPick()" class = 'color'>Color</button>
+            <button id = 'black' onclick="blackPick()" class = 'blk'>Black</button>
+            <button onclick="gridChange()" class = 'gridSize'>Grid Size</button>
+            <button onclick="reset()" class = 'reset'>Reset</button>
+            <button  id = 'gridTog' onclick="gridTog()" class = 'gridTog'>Grid Off</button>
         </div>
         <div id = 'main'>
           
