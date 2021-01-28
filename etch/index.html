@@ -7,21 +7,33 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
     </head>
     <body>
         <h1>Etch-a-Sketch</h1>
         <div class = 'btnContainer'>
-            <button id = 'color' onclick="colorPick()" class = 'color'>Color</button>
+           
+           <button id = 'randcolor' onclick="randomPick()" class = 'blk'>Random</button>
             <button id = 'black' onclick="blackPick()" class = 'blk'>Black</button>
+            <button  id = 'eraser' onclick="eraser()" class = 'gridTog'> Eraser</button>
             <button onclick="gridChange()" class = 'gridSize'>Grid Size</button>
             <button onclick="reset()" class = 'reset'>Reset</button>
             <button  id = 'gridTog' onclick="gridTog()" class = 'gridTog'>Grid Off</button>
+            
+            
         </div>
+        <div style = 'display: flex; flex-direction: column; justify-content: center;'>
+        
         <div id = 'main'>
-          
+            
         </div>
-    
+        <div style = 'align-self: center;'>
+        <input style = 'height: 50px; width: 33vw'type="color" id="cp" name="head"
+        value="#e66465">
+    </div>
+    </div>
         
         <script src="assets/script.js" async defer></script>
+        
     </body>
 </html>

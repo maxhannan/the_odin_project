@@ -4,6 +4,19 @@ const main = document.getElementById('main');
 let boxes = document.getElementsByClassName('box');
 let boxList = Array.from(boxes);
 let gridOn = true;
+let colorPicker = document.getElementById('cp');
+let hex = 'red';
+// color picker
+// var colorPicker = new iro.ColorPicker('#picker');
+colorPicker.addEventListener("input", watchColorPicker, false);
+
+function watchColorPicker(event) {
+    hex = event.target.value;
+    console.log(hex);
+    document.querySelector('#cp').style.opacity = 1; 
+    colorPick();
+
+}
 Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
     v.style.background = 'black';
   }));
@@ -108,18 +121,43 @@ function reset() {
 }
 function colorPick() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
+        v.style.background = hex;
+      }));
+    document.querySelector('#randcolor').style.backgroundColor = 'black'; 
+    document.querySelector('#black').style.backgroundColor = 'black';
+    document.querySelector('#eraser').style.backgroundColor = 'black';
+    document.querySelector('#cp').style.opacity = 1;     
+}
+function randomPick() {
+    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = randColor();
       }));
-    document.querySelector('#color').style.backgroundColor = 'green';
-    document.querySelector('#black').style.backgroundColor = 'black';   
+    document.querySelector('#randcolor').style.backgroundColor = 'green'; 
+    document.querySelector('#black').style.backgroundColor = 'black';
+    document.querySelector('#eraser').style.backgroundColor = 'black';
+    document.querySelector('#cp').style.opacity = .2;     
 }
 
 function blackPick() {
     Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-        v.style.background = 'black';
-      })); 
-      document.querySelector('#color').style.backgroundColor = 'black';
-      document.querySelector('#black').style.backgroundColor = 'green';      
-}
 
+        v.style.background = 'black';
+        
+      })); 
+      document.querySelector('#randcolor').style.backgroundColor = 'black'; 
+      document.querySelector('#eraser').style.backgroundColor = 'black'; 
+      document.querySelector('#black').style.backgroundColor = 'green';
+      document.querySelector('#cp').style.opacity = .2;       
+}
+function eraser() {
+    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
+
+        v.style.background = 'transparent';
+        
+      })); 
+      document.querySelector('#randcolor').style.backgroundColor = 'black'; 
+      document.querySelector('#cp').style.opacity = .2; 
+      document.querySelector('#black').style.backgroundColor = 'black';   
+      document.querySelector('#eraser').style.backgroundColor = 'green';    
+}
 
