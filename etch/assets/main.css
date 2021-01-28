@@ -8,12 +8,12 @@ body{
 }
 h1{
     text-align: center;
-    font-size: 4vw;
+    font-size: 3vw;
     
 }
 #main{
-    height:32vw;
-    width:32vw;
+    height:34vw;
+    width:34vw;
     border: gray 1px solid;
     align-self: center;
     display: grid;
