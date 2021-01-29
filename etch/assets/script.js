@@ -9,8 +9,8 @@ const randBtn = document.querySelector('#randcolor');
 const blkBtn = document.querySelector('#black');
 const eraserBtn = document.querySelector('#eraser');
 const gridTogBtn = document.querySelector('#gridTog');
-let hex = 'red';
-blackPick()
+let hex = colorPicker.value;
+colorPick()
 
 
 // Random Whole Number Generator 
@@ -107,7 +107,7 @@ function reset() {
     shake();
     gridReverse()
     gridTog() 
-    blackPick() 
+    colorPick()
 }
 
 // Functions for etch a sketch tools. 
