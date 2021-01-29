@@ -8,50 +8,49 @@ body{
 .operator{
     background-color: lightcoral;
 }
-.number{
-    background-color: lightsteelblue;
+
+#calcContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+
+
+    
 }
-.modifier{
-    background-color: lightgreen;
-}
-#display{
+.calculator-screen{
     background-color: linen;
-    display: grid;
     font-family:'Trebuchet MS', sans-serif;
     font-weight: 700;
-    font-size: 3vw;
-    align-items: center; 
-    justify-content: flex-end; 
-    align-self: center; 
-    height: 100%;
-    padding-right: 3%;
-    overflow-x: hidden;
-
+    font-size: 6vw;
+    text-align: right;
+    
+    border: none;
+    
 }
-#container{
-    max-width: 30vw;
-
+.keys{
+   
     display: grid;
      grid-template:
-    'display display display del'
-    'AC exp fact divide'
-    'nine eight seven mult'
-    'six five four subt'
-    'three two one add'
+     'AC mult exp fact '
+    'AC subt add  divide'
+    'nine eight seven equals'
+    'six five four equals '
+    'three two one equals '
     'posNeg zero decimal equals';
     grid-gap: 8px 8px;
+   
 }
 button {
-    width: 120px;
+   
     display: inline-block;
     padding: 15px 25px;
-    font-size: 3em;
+    font-size: 3vw;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: lightskyblue;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
