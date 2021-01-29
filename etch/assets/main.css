@@ -8,12 +8,12 @@ body{
 }
 h1{
     text-align: center;
-    font-size: 3vw;
+    font-size: 2.8vw;
     
 }
 #main{
-    height:34vw;
-    width:34vw;
+    height:42vw;
+    width:42vw;
     border: gray 1px solid;
     align-self: center;
     display: grid;
@@ -50,7 +50,7 @@ h1{
 
 
 .btnContainer{
-    margin-bottom: 2%;
+    margin-top: 1%;
     align-self: center;
     
 }
@@ -59,7 +59,7 @@ button{
     opacity: .5;
     font-family: 'Courier New', Courier, monospace;
     align-self: center; 
-    font-size:.8em;
+    font-size:.8vw;
     font-weight:600;
     background:black;
     color:white;
