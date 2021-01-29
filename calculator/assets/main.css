@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+     background-color: #fffaf0;
+}
+.operator{
+    background-color: lightcoral;
+}
+.number{
+    background-color: lightsteelblue;
+}
+.modifier{
+    background-color: lightgreen;
+}
+#display{
+    display: grid;
+    font-family:'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    align-items: center; 
+    justify-content: flex-end; 
+    align-self: center; 
+    height: 100%;
+    padding-right: 3%;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+#container{
+    max-width: 30vw;
+
+    display: grid;
+     grid-template:
+    'display display display del'
+    'AC exp fact divide'
+    'nine eight seven mult'
+    'six five four subt'
+    'three two one add'
+    'posNeg zero decimal equals';
+    grid-gap: 8px 8px;
+}
+button {
+    width: 120px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 3em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  button:hover {background-color: #3e8e41}
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+button:hover {background-color: lightpink}
+
