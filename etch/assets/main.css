@@ -17,8 +17,11 @@ h1{
     border: gray 1px solid;
     align-self: center;
     display: grid;
-    
+    opacity: .8;
     flex-wrap: wrap;
+}
+#main.active{
+  opacity: 1;
 }
 .box{
   border: gray 1px solid;   

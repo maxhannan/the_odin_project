@@ -1,16 +1,24 @@
 let gridSize = 16;
-window.open = grid(gridSize);
+
+let gridOn = true;
+
 const main = document.getElementById('main');
 let boxes = document.getElementsByClassName('box');
-let boxList = Array.from(boxes);
-let gridOn = true;
 const colorPicker = document.getElementById('cp');
 const randBtn = document.querySelector('#randcolor');
 const blkBtn = document.querySelector('#black');
 const eraserBtn = document.querySelector('#eraser');
 const gridTogBtn = document.querySelector('#gridTog');
 let hex = colorPicker.value;
-colorPick()
+let boxList = Array.from(boxes);
+
+
+
+// adds "click to draw" functionaility
+let drawing = false; 
+
+main.addEventListener('mousedown', ()=> {drawing = (!drawing); main.classList.toggle('active')});
+
 
 
 // Random Whole Number Generator 
@@ -21,11 +29,12 @@ function getRandomInt(min, max) {
 }
 // Set up event listener for color picker
 colorPicker.addEventListener("input", watchColorPicker, false);
+
 function watchColorPicker(event) {
     hex = event.target.value;
-    console.log(hex);
     colorPick();
 }
+
 // Creates grid of boxes and appends to DOM, emptys and resets if called again. 
 function grid(width){
     var main = document.getElementById('main');
@@ -109,21 +118,30 @@ function reset() {
     gridTog() 
     colorPick()
 }
-
+// checks drawing variable (for click to draw), chooses color, draws;
+function draw(color){
+    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
+        if(!drawing){
+            return;
+        }else{
+            if(color == 'rand'){
+                v.style.background = randColor(); 
+            }
+        v.style.background = color;
+        }
+      }));
+}
 // Functions for etch a sketch tools. 
 function colorPick() {
-    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-        v.style.background = hex;
-      }));
+    draw(hex);
     randBtn.style.backgroundColor = 'black'; 
     blkBtn.style.backgroundColor = 'black';
     eraserBtn.style.backgroundColor = 'black';
     colorPicker.style.opacity = 1;     
 }
+
 function randomPick() {
-    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-        v.style.background = randColor();
-      }));
+    draw('rand')
     randBtn.style.backgroundColor = 'green'; 
     blkBtn.style.backgroundColor = 'black';
     eraserBtn.style.backgroundColor = 'black';
@@ -131,22 +149,19 @@ function randomPick() {
 }
 
 function blackPick() {
-    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-        v.style.background = 'black';  
-      })); 
-      randBtn.style.backgroundColor = 'black'; 
-      eraserBtn.style.backgroundColor = 'black'; 
-      blkBtn.style.backgroundColor = 'green';
-      colorPicker.style.opacity = .4;       
+    draw('black');
+    randBtn.style.backgroundColor = 'black'; 
+    eraserBtn.style.backgroundColor = 'black'; 
+    blkBtn.style.backgroundColor = 'green';
+    colorPicker.style.opacity = .4;       
 }
 function eraser() {
-    Array.from(boxes).forEach(v => v.addEventListener('mouseover', function() {
-        v.style.background = 'transparent';
-      })); 
+    draw('transparent');
       randBtn.style.backgroundColor = 'black'; 
       colorPicker.style.opacity = .4; 
       blkBtn.style.backgroundColor = 'black';   
       eraserBtn.style.backgroundColor = 'green';    
 }
 
-
+window.open = grid(gridSize);
+colorPick();
