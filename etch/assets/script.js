@@ -12,14 +12,9 @@ const gridTogBtn = document.querySelector('#gridTog');
 let hex = colorPicker.value;
 let boxList = Array.from(boxes);
 
-
-
 // adds "click to draw" functionaility
 let drawing = false; 
-
 main.addEventListener('mousedown', ()=> {drawing = (!drawing); main.classList.toggle('active')});
-
-
 
 // Random Whole Number Generator 
 function getRandomInt(min, max) {
@@ -27,6 +22,7 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); 
 }
+
 // Set up event listener for color picker
 colorPicker.addEventListener("input", watchColorPicker, false);
 
@@ -48,8 +44,8 @@ function grid(width){
         main.appendChild(box);
         }
     } 
-    
 }
+
 // Random Color Picker
 function randColor(){
     return '#' + Math.floor(Math.random()*16777215).toString(16);
@@ -59,12 +55,14 @@ function randColor(){
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 // Turns on and off shake animation for etch
 async function shake(){
     main.classList.add('shake'); 
     await sleep(500);
     main.classList.remove('shake'); 
 }
+
 // Gets user input for new grid size, and calls reset functions
 function gridChange() {
     let validInput = false;
@@ -157,10 +155,10 @@ function blackPick() {
 }
 function eraser() {
     draw('transparent');
-      randBtn.style.backgroundColor = 'black'; 
-      colorPicker.style.opacity = .4; 
-      blkBtn.style.backgroundColor = 'black';   
-      eraserBtn.style.backgroundColor = 'green';    
+    randBtn.style.backgroundColor = 'black'; 
+    colorPicker.style.opacity = .4; 
+    blkBtn.style.backgroundColor = 'black';   
+    eraserBtn.style.backgroundColor = 'green';    
 }
 
 window.open = grid(gridSize);
